@@ -1,0 +1,38 @@
+REAPER/
+pulse/
+github-copilot/
+obs-studio/
+GIMP/
+omf/
+QOpenVPN/
+pavucontrol.ini
+QtProject.conf
+yay/
+volumeicon/
+Code - OSS/
+vlc/
+yabridgectl/
+MongoDB Compass/
+Android Open Source Project/
+google-chrome-for-testing/
+capacitor/
+VirtualBox/
+Thunar/
+Docker Desktop/
+Google/
+Postman/
+nextjs-nodejs/
+xfce4/
+systemd/
+libreoffice/
+mimeapps.list
+simple-update-notifier/
+menus/
+htop/
+gtk-2.0/
+gtk-3.0/
+dconf/
+cef_user_data/
+coc/
+lazyVim/
+fish/
