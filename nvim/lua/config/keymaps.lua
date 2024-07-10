@@ -51,6 +51,13 @@ keymap.set("n", "<C-w><rigth>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
+keymap.set("n", "zR", ':lua require"nvim-treesitter".foldexpr.set_fold_level(99)<CR>', { noremap = true })
+keymap.set("n", "zM", ':lua require"nvim-treesitter".foldexpr.set_fold_level(0)<CR>', { noremap = true })
+
+keymap.set("n", "<C-n>", ":VMultiCursor<CR>", { noremap = true, silent = true })
+keymap.set("v", "<C-n>", ":VMultiCursor<CR>", { noremap = true, silent = true })
+keymap.set("i", "<C-n>", "<Esc>:VMultiCursor<CR>", { noremap = true, silent = true })
+
 --diagnostics
 
 keymap.set("n", "<C-j>", function()
