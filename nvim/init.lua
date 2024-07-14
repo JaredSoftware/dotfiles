@@ -1,9 +1,23 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.lazy")
+-- init.lua
+vim.g.mapleader = ' '
 
-require("impatient")
+-- Packer bootstrap
+local execute = vim.api.nvim_command
+local fn = vim.fn
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
--- Cargar plugins usando lazy.nvim
-require("lazy").setup("plugins")
+if fn.empty(fn.glob(install_path)) > 0 then
+  execute('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
+end
 
-vim.g.VM_default_mappings = 0
+-- Load configurations
+require('user.plugins')
+require('user.options')
+require('user.keymaps')
+require('user.treesitter')
+require('user.lualine')
+require('user.telescope')
+require('user.nvim-tree')
+require('user.indent-blankline')
+require('user.ufo')
+require('user.null-ls') 
