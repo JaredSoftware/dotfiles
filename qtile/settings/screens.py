@@ -17,7 +17,7 @@ def status_bar(widgets):
 
 screens = [Screen(top=status_bar(primary_widgets),
             # Set wallpaper
-            wallpaper="/home/jwvcsoftware/.config/qtile/eva.png",
+            wallpaper="/home/jwvcsoftware/.config/qtile/marines.jpg",
             wallpaper_mode='fill'
         )]
 
@@ -41,6 +41,6 @@ if connected_monitors > 1:
     for _ in range(1, connected_monitors):
         screens.append(Screen(top=status_bar(secondary_widgets),
         # Set wallpaper
-            wallpaper="/home/jwvcsoftware/.config/qtile/eva.png",
+            wallpaper="/home/jwvcsoftware/.config/qtile/marines.jpg",
             wallpaper_mode='fill'
         ))

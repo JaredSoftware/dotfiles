@@ -72,9 +72,9 @@ primary_widgets = [
     icon(bg="color4", text=' '), # Icon: nf-fa-download
     
     widget.CheckUpdates(
-        background=colors['color4'],
-        colour_have_updates=colors['text'],
-        colour_no_updates=colors['text'],
+        background=colors['color4'],          # Fondo amarillo (color4)
+        colour_have_updates=colors['light'],   # Texto oscuro
+        colour_no_updates=colors['light'],     # Texto oscuro
         no_update_string='0',
         display_format='{updates}',
         update_interval=1800,
@@ -85,19 +85,19 @@ primary_widgets = [
 
     icon(bg="color3", text=' '),  # Icon: nf-fa-feed
     
-    widget.Net(**base(bg='color3'), interface='wlp0s20f3'),
+    widget.Net(**base(bg='color3', fg='dark'), interface='wlp0s20f3'),  # Texto oscuro
 
     powerline('color2', 'color3'),
 
     widget.CurrentLayoutIcon(**base(bg='color2'), scale=0.65),
 
-    widget.CurrentLayout(**base(bg='color2'), padding=5),
+    widget.CurrentLayout(**base(bg='color2', fg='dark'), padding=5),  # Texto oscuro
 
     powerline('color1', 'color2'),
 
     icon(bg="color1", fontsize=17, text=' '), # Icon: nf-mdi-calendar_clock
 
-    widget.Clock(**base(bg='color1'), format='%d/%m/%Y - %H:%M '),
+    widget.Clock(**base(bg='color1', fg='dark'), format='%d/%m/%Y - %H:%M '), # Texto oscuro
 
     powerline('dark', 'color1'),
 
@@ -113,11 +113,11 @@ secondary_widgets = [
 
     widget.CurrentLayoutIcon(**base(bg='color1'), scale=0.65),
 
-    widget.CurrentLayout(**base(bg='color1'), padding=5),
+    widget.CurrentLayout(**base(bg='color1', fg='dark'), padding=5), # Texto oscuro
 
     powerline('color2', 'color1'),
 
-    widget.Clock(**base(bg='color2'), format='%d/%m/%Y - %H:%M '),
+    widget.Clock(**base(bg='color2', fg='dark'), format='%d/%m/%Y - %H:%M '), # Texto oscuro
 
     powerline('dark', 'color2'),
 ]
@@ -128,3 +128,4 @@ widget_defaults = {
     'padding': 1,
 }
 extension_defaults = widget_defaults.copy()
+
